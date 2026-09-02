@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isso Não É Um Chapéu — Clécio Branco | Reflexões sobre O Pequeno Príncipe</title>
+<meta name="description" content="O Pequeno Príncipe relido pelo olhar adulto. Uma travessia filosófica e afetiva de Clécio Branco, psicólogo e filósofo. Disponível na Amazon em português, francês e espanhol.">
+<meta name="author" content="Clécio Branco">
+<link rel="canonical" href="https://issonaoeumchapeu.com.br/">
+<meta property="og:type" content="book">
+<meta property="og:title" content="Isso Não É Um Chapéu — Clécio Branco">
+<meta property="og:description" content="O Pequeno Príncipe relido pelo olhar adulto. Uma travessia filosófica e afetiva. Disponível na Amazon.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#151936">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23151936'/%3E%3Cellipse cx='50' cy='52' rx='34' ry='9' fill='%23E8B84A'/%3E%3Cellipse cx='50' cy='45' rx='18' ry='16' fill='%23E8B84A'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero_desktop.webp" media="(min-width:881px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero_mobile.webp" media="(max-width:880px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Karla:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Karla:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Karla:wght@300;400;500;700&display=swap"></noscript>
+<style>
+:root{
+  /* paleta do universo do livro */
+  --night:#1c2148;        /* índigo da noite */
+  --night-deep:#141833;   /* índigo profundo */
+  --night-soft:#262c58;   /* índigo claro (cards) */
+  --paper:#f7f1e1;        /* creme papel */
+  --paper-2:#efe6cd;      /* creme sombreado */
+  --ink:#2c2a45;          /* texto sobre papel */
+  --ink-soft:#5b5878;     /* texto secundário sobre papel */
+  --gold:#e8b84a;         /* ouro do trigo/estrelas */
+  --amber:#d99a2b;        /* âmbar profundo */
+  --lilac:#9a8fdc;        /* lilás das estrelas */
+  --fox:#e2712c;          /* laranja da raposa */
+  --rose:#d95970;         /* a rosa */
+  --star:#fdf6e3;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Karla',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{font-family:var(--sans);background:var(--night);color:var(--paper);line-height:1.75;font-weight:400;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
+
+/* ============ tipografia ============ */
+h1,h2{font-family:var(--serif);font-weight:500;letter-spacing:.2px}
+h1{font-size:clamp(2.4rem,6.4vw,4.6rem);line-height:1.06}
+h2{font-size:clamp(1.9rem,4.2vw,2.9rem);line-height:1.14;margin-bottom:26px}
+h1 em,h2 em{font-style:italic;font-weight:400}
+.kicker{font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;font-weight:700;margin-bottom:22px}
+.prose p{font-size:1.09rem;max-width:60ch;margin-top:20px;font-weight:400}
+.prose p:first-child{margin-top:0}
+.prose strong{font-weight:700}
+.prose em{font-family:var(--serif);font-style:italic}
+
+/* seções noite */
+.night{background:var(--night);color:var(--paper)}
+.night .kicker{color:var(--gold)}
+.night h2 .hl{color:var(--gold)}
+.night .prose p{color:#ded9c8}
+.night .prose strong{color:#fff}
+
+/* seções papel */
+.paper{background:var(--paper);color:var(--ink)}
+.paper .kicker{color:var(--amber)}
+.paper h2{color:var(--ink)}
+.paper h2 .hl{color:var(--amber)}
+.paper .prose p{color:#4a4763}
+.paper .prose strong{color:var(--ink)}
+
+/* ============ céu do hero ============ */
+.hero-sky{position:relative;background:#0d0d1a url(img/hero_desktop.webp) right bottom/cover no-repeat;
+  aspect-ratio:1916/821;max-height:92vh;overflow:clip}
+.hero-sky::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 62% 70% at 20% 38%,rgba(6,6,16,.62),transparent 68%)}
+.hero-stars{display:none;position:absolute;left:0;right:0;top:0;height:34%;pointer-events:none;overflow:hidden}
+.hero-stars i{position:absolute;border-radius:50%;background:var(--star);animation:tw 4.5s ease-in-out infinite}
+.hero-stars svg{position:absolute;animation:tw 6s ease-in-out infinite}
+.stars{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.stars i{position:absolute;border-radius:50%;background:var(--star);animation:tw 4.5s ease-in-out infinite}
+.stars svg{position:absolute;animation:tw 6s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.25}50%{opacity:.95}}
+.shoot{position:absolute;top:14%;left:-14%;width:170px;height:2px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,var(--star));border-radius:2px;
+  transform:rotate(-15deg);opacity:0;animation:shoot 12s ease-in 4s infinite}
+@keyframes shoot{0%{opacity:0;transform:translate(0,0) rotate(-15deg)}2%{opacity:.9}
+ 7%{opacity:0;transform:translate(120vw,30vh) rotate(-15deg)}100%{opacity:0;transform:translate(120vw,30vh) rotate(-15deg)}}
+
+/* ============ seletor de idioma flutuante ============ */
+.langs{display:flex;gap:3px;background:rgba(20,24,51,.55);backdrop-filter:blur(10px);border:1px solid rgba(232,184,74,.3);border-radius:999px;padding:3px}
+.langs-float{position:absolute;top:22px;right:26px;z-index:40}
+.brand{font-family:var(--serif);font-size:1.22rem;color:#fff}
+.brand b{color:var(--gold);font-weight:600}
+.langs button{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.08em;color:#c9c4e2;background:none;border:0;padding:7px 12px;border-radius:999px;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:6px}
+.langs button svg{flex:none}
+.langs button.on{background:var(--gold);color:#2c2110}
+.langs button:not(.on):hover{color:#fff}
+
+/* ============ hero ============ */
+.hero{display:flex;align-items:center;height:100%;padding:44px 0 11%}
+.hero-txt{max-width:50%}
+.hero-sky .wrap{height:100%}
+.hero .kicker{display:flex;align-items:center;gap:12px}
+.hero .kicker::before{content:"";width:30px;height:2px;background:var(--gold)}
+.hero h1{color:#fff}
+.hero h1 .dot{color:var(--gold)}
+.lede{font-size:1.16rem;line-height:1.7;color:#eeebf6;margin:26px 0 8px;max-width:36ch;text-shadow:0 1px 16px rgba(8,8,20,.7)}
+.by{font-family:var(--serif);font-style:italic;font-size:1.02rem;color:#cfc5f4;margin-bottom:36px;text-shadow:0 1px 12px rgba(8,8,20,.7)}
+.btn{display:inline-flex;align-items:center;gap:11px;font-weight:700;font-size:1rem;letter-spacing:.02em;
+  background:linear-gradient(180deg,#f3cd6f,var(--gold));color:#2c2110;padding:17px 36px;border-radius:999px;
+  box-shadow:0 14px 36px rgba(232,184,74,.3);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 20px 46px rgba(232,184,74,.42)}
+.btn svg{width:19px;height:19px}
+
+
+/* dunas creme fazendo a transição noite -> papel */
+.dunes{position:absolute;left:0;right:0;bottom:-1px;pointer-events:none;line-height:0}
+.dunes svg{width:100%;height:auto}
+
+/* ============ convite (papel) ============ */
+.paper-sec{padding:110px 0}
+.convite-sec{position:relative;padding-top:150px}
+.dune-cap{position:absolute;top:-1px;left:0;right:0;line-height:0;pointer-events:none}
+.dune-cap svg{width:100%;height:auto}
+.split{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center}
+.dropcap::first-letter{font-family:var(--serif);font-weight:600;font-size:3.4em;float:left;line-height:.86;margin:6px 14px 0 0;color:var(--amber)}
+.planet-wrap{justify-self:center;width:min(340px,74vw)}
+.planet-wrap svg{width:100%;height:auto}
+
+/* ============ quote trigo (noite) ============ */
+.quote-sec{position:relative;padding:150px 0 235px;background:
+  linear-gradient(180deg,var(--night-deep) 0%,var(--night) 55%,#2a2c52 100%);overflow:clip;text-align:center}
+.pull{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.5rem,3.4vw,2.35rem);line-height:1.5;color:#f3e6c3;max-width:820px;margin:0 auto}
+.pull-mark{display:block;font-size:4.2rem;line-height:.6;color:var(--gold);font-style:normal;margin-bottom:26px;font-weight:500}
+.pull-src{display:block;font-family:var(--sans);font-style:normal;font-size:.78rem;letter-spacing:.28em;color:var(--lilac);margin-top:30px;text-transform:uppercase;font-weight:700}
+.wheat{position:absolute;left:0;right:0;bottom:-1px;pointer-events:none;line-height:0}
+.wheat svg{width:100%;height:auto}
+/* vento no trigo */
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 4.6s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-1.8deg)}50%{transform:rotate(2.2deg)}}
+/* vagalumes */
+.fireflies{position:absolute;inset:0;pointer-events:none}
+.fireflies i{position:absolute;width:4px;height:4px;border-radius:50%;background:#f3cd6f;
+  box-shadow:0 0 8px 2px rgba(243,205,111,.55);opacity:0;animation:fly 7s ease-in-out infinite}
+@keyframes fly{0%,100%{opacity:0;transform:translate(0,0)}25%{opacity:.9}
+ 50%{opacity:.35;transform:translate(14px,-20px)}75%{opacity:.85;transform:translate(-8px,-34px)}}
+
+/* ============ profundidade (papel) ============ */
+.press{margin-top:38px;display:flex;gap:18px;background:#fff9ea;border:1px solid rgba(217,154,43,.35);border-left:4px solid var(--amber);border-radius:12px;padding:22px 26px;max-width:640px}
+.press .q{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:8px;font-weight:700}
+.press p{font-size:1rem;color:#4a4763;margin:0;line-height:1.65}
+
+/* ============ desenho nº 1 (chapéu/elefante) ============ */
+.hat-wrap{justify-self:center;width:min(380px,80vw)}
+.hat-wrap svg{width:100%;height:auto}
+.hat-wrap .eleph{opacity:.5;animation:breathe 5s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.32}50%{opacity:.85}}
+.hat-wrap:hover .eleph{opacity:1;animation:none}
+
+/* ============ ornamento de livro (fleuron chapéu) ============ */
+.fleuron{display:flex;align-items:center;justify-content:center;gap:18px;margin:0 auto 34px;max-width:300px}
+.fleuron::before,.fleuron::after{content:"";flex:1;height:1px;background:currentColor;opacity:.3}
+.fleuron svg{width:38px;height:22px;flex:none}
+
+/* ============ cordeiro na caixa (fim do sumário) ============ */
+.sheepbox{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:52px;color:var(--ink-soft)}
+.sheepbox svg{width:74px;height:58px;flex:none}
+.sheepbox em{font-family:var(--serif);font-size:1rem}
+
+/* ============ pássaros da partida ============ */
+.birds{position:absolute;top:9%;left:6%;opacity:.85;animation:birds 14s ease-in-out infinite}
+@keyframes birds{0%,100%{transform:translate(0,0)}50%{transform:translate(26px,-12px)}}
+
+/* ============ sumário de livro (papel-2) ============ */
+.toc-sec{background:var(--paper-2);padding:110px 0}
+.toc{list-style:none;margin-top:44px;columns:2;column-gap:70px}
+.toc li{break-inside:avoid;display:flex;align-items:baseline;gap:12px;padding:13px 0;font-size:1.04rem;color:#4a4763}
+.toc .n{font-family:var(--serif);font-weight:600;font-size:1.12rem;color:var(--amber);min-width:34px}
+.toc .dots{flex:1;border-bottom:2px dotted rgba(90,85,120,.35);transform:translateY(-4px);min-width:24px}
+.toc .st{color:var(--lilac);flex:none}
+
+/* ============ autor (noite) ============ */
+.author-sec{position:relative;padding:120px 0;background:var(--night);overflow:clip}
+.author-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.stats{display:grid;grid-template-columns:1fr;gap:14px}
+.stat{background:var(--night-soft);border:1px solid rgba(232,184,74,.22);border-radius:14px;padding:22px 26px;display:flex;align-items:baseline;gap:16px}
+.stat b{font-family:var(--serif);font-size:2.3rem;font-weight:600;color:var(--gold);line-height:1;min-width:64px}
+.stat span{font-size:.95rem;color:#c9c4e2}
+
+/* ============ depoimento (papel) ============ */
+.depo-sec{background:var(--paper);padding:120px 0;text-align:center}
+.depo-sec .pull{color:var(--ink)}
+.depo-sec .pull-src{color:var(--ink-soft)}
+.depo-sec .pull-mark{color:var(--amber)}
+
+/* ============ idiomas (papel) ============ */
+.idio-sec{background:var(--paper);padding:0 0 120px}
+.langgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+.langcard{background:#fff;border:1px solid rgba(44,42,69,.1);border-radius:18px;padding:36px 24px 30px;text-align:center;cursor:pointer;transition:.25s;box-shadow:0 6px 22px rgba(44,42,69,.06)}
+.langcard:hover,.langcard:focus-visible{transform:translateY(-5px);box-shadow:0 20px 40px rgba(44,42,69,.14);border-color:rgba(217,154,43,.5)}
+.langcard svg{width:76px;height:76px;margin:0 auto 16px}
+.langcard b{display:block;font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--ink);margin-bottom:4px}
+.langcard span{font-size:.9rem;color:var(--ink-soft)}
+
+/* ============ finale crepúsculo ============ */
+.finale{position:relative;padding:170px 0 210px;text-align:center;overflow:clip;background:
+  linear-gradient(180deg,var(--night-deep) 0%,var(--night) 34%,#3b3564 58%,#7c5570 76%,#c58a56 92%,#e8b84a 100%)}
+.finale h2{color:#fff;font-size:clamp(2.3rem,5vw,3.6rem)}
+.finale p{font-size:1.14rem;color:#e8e2f0;max-width:52ch;margin:0 auto 40px}
+.finale .btn{box-shadow:0 16px 44px rgba(20,24,51,.5)}
+.fin-star{margin:0 auto 18px;animation:tw 4s ease-in-out infinite}
+.cta-halo{position:relative;display:inline-block}
+.cta-halo::before{content:"";position:absolute;inset:-16px -26px;border-radius:999px;pointer-events:none;
+  background:radial-gradient(50% 50% at 50% 50%,rgba(243,205,111,.38),transparent 70%);
+  animation:halo 3.2s ease-in-out infinite}
+@keyframes halo{0%,100%{opacity:.5;transform:scale(.96)}50%{opacity:1;transform:scale(1.06)}}
+.btn-xl{font-size:1.14rem;padding:21px 46px;gap:13px;position:relative;overflow:hidden;
+  box-shadow:0 18px 50px rgba(232,184,74,.42),0 0 0 1px rgba(255,255,255,.25) inset}
+.btn-xl:hover{transform:translateY(-3px) scale(1.02)}
+.btn-xl .arr{width:20px;height:20px;transition:transform .25s}
+.btn-xl:hover .arr{transform:translateX(5px)}
+.btn-xl::after{content:"";position:absolute;top:0;bottom:0;left:-70%;width:44%;pointer-events:none;
+  background:linear-gradient(105deg,transparent,rgba(255,255,255,.5),transparent);
+  transform:skewX(-18deg);animation:shine 3.6s ease-in-out infinite}
+@keyframes shine{0%,55%{left:-70%}85%,100%{left:130%}}
+.cta-note{font-size:.86rem;color:#efe6f4;opacity:.85;margin-top:22px;letter-spacing:.04em}
+.plane{position:absolute;top:15%;right:7%;opacity:.85;animation:plane 9s ease-in-out infinite}
+@keyframes plane{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,9px)}}
+.finale-dunes{position:absolute;left:0;right:0;bottom:-1px;pointer-events:none;line-height:0}
+.finale-dunes svg{width:100%;height:auto}
+
+footer{background:#101328;padding:52px 0;text-align:center;color:#8f8ab0;font-size:.9rem}
+footer .brand{font-size:1.15rem;margin-bottom:12px}
+footer a{color:var(--gold)}
+
+/* ============ responsivo ============ */
+@media(max-width:880px){
+  .hero-sky{background:#0d0d1a url(img/hero_mobile.webp) center bottom/100% auto no-repeat;aspect-ratio:auto;min-height:208vw;max-height:none}
+  .hero{text-align:center;align-items:flex-start;height:100%;padding:72px 0 0}
+  .hero-txt{max-width:none;margin:0 auto}
+  .hero-stars{display:block}
+  h1{font-size:2.35rem;letter-spacing:0}
+  .lede{font-size:.99rem;max-width:32ch;margin-top:16px}
+  .by{font-size:.92rem;margin-bottom:24px}
+  .btn{padding:14px 28px;font-size:.92rem}
+  .kicker{margin-bottom:14px}
+  .langs-float{top:16px;right:50%;transform:translateX(50%)}
+  .hero .kicker{justify-content:center}
+  .hero .kicker::before{display:none}
+  .kicker{letter-spacing:.22em;font-size:.72rem}
+  .lede,.by{margin-left:auto;margin-right:auto}
+  .split,.author-grid{grid-template-columns:1fr;gap:44px}
+  .planet-wrap{width:min(260px,68vw)}
+  .toc{columns:1}
+  .langgrid{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}
+  .paper-sec,.toc-sec,.author-sec,.depo-sec{padding:84px 0}
+  .idio-sec{padding:0 0 90px}
+  .quote-sec{padding:110px 0 200px}
+  .finale{padding:130px 0 180px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<main>
+<!-- ============ HERO ============ -->
+<header class="hero-sky">
+  <div class="shoot" aria-hidden="true"></div>
+  <div class="hero-stars stars" id="starsHero" aria-hidden="true"></div>
+  <div class="langs langs-float" role="group" aria-label="Idioma">
+    <button data-lang="pt" class="on" onclick="setLang('pt')">
+      <svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><defs><clipPath id="nf1"><circle cx="10" cy="10" r="10"/></clipPath></defs><g clip-path="url(#nf1)"><rect width="20" height="20" fill="#199b4c"/><path d="M10 3 L 17.5 10 L 10 17 L 2.5 10 Z" fill="#f6d34c"/><circle cx="10" cy="10" r="3.2" fill="#2a4b9b"/></g></svg>PT</button>
+    <button data-lang="fr" onclick="setLang('fr')">
+      <svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><defs><clipPath id="nf2"><circle cx="10" cy="10" r="10"/></clipPath></defs><g clip-path="url(#nf2)"><rect width="6.67" height="20" fill="#2a4b9b"/><rect x="6.67" width="6.67" height="20" fill="#f4f0e6"/><rect x="13.33" width="6.67" height="20" fill="#d0342c"/></g></svg>FR</button>
+    <button data-lang="es" onclick="setLang('es')">
+      <svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><defs><clipPath id="nf3"><circle cx="10" cy="10" r="10"/></clipPath></defs><g clip-path="url(#nf3)"><rect width="20" height="20" fill="#d0342c"/><rect y="6.5" width="20" height="7" fill="#f6c94c"/></g></svg>ES</button>
+  </div>
+  <div class="wrap">
+    <div class="hero">
+      <div class="hero-txt">
+        <p class="kicker" data-i="eyebrow">Reflexões a respeito de O Pequeno Príncipe</p>
+        <h1><span data-i="h1">Isso não é um chapéu</span><span class="dot">.</span></h1>
+        <p class="lede" data-i="lede">O Pequeno Príncipe relido pelo olhar adulto. O que a criança via de primeira, e o adulto passou a vida sem enxergar.</p>
+        <p class="by" data-i="by">do psicólogo e filósofo Clécio Branco</p>
+        <a class="btn" id="ctaTop" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Zm0 2.2 6.5 3.6L12 11.4 5.5 7.8 12 4.2ZM5 9.3l6 3.4v6.9l-6-3.3V9.3Zm8 10.3v-6.9l6-3.4v7l-6 3.3Z"/></svg>
+          <span data-i="cta">Ler na Amazon</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ O CONVITE (papel) ============ -->
+<section class="paper paper-sec convite-sec">
+  <div class="dune-cap" aria-hidden="true">
+    <svg viewBox="0 0 1440 96" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0 L 1440 0 L 1440 34 C 1280 62 1120 40 960 52 C 780 66 620 44 460 56 C 300 68 140 50 0 60 Z" fill="#f9d34e"/>
+      <ellipse cx="320" cy="26" rx="26" ry="8" fill="#dfb63a"/>
+      <ellipse cx="760" cy="30" rx="20" ry="6.5" fill="#dfb63a"/>
+      <ellipse cx="1130" cy="22" rx="24" ry="7" fill="#dfb63a"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="kicker" data-i="k_convite">O convite</p>
+        <h2 data-i="t_convite">Sob o desenho, <span class="hl"><em>algo maior</em></span></h2>
+        <div class="prose" id="convite">
+          <p class="dropcap">Quase todos lemos <strong>O Pequeno Príncipe</strong> na infância, quando as histórias ganham vida pelo encantamento e pela inocência. Guardamos o livro como um conto sobre a ternura, a amizade e a pureza do coração.</p>
+          <p>Mas, ao voltar a esse clássico já adultos, somos convidados a ver <strong>além do chapéu</strong>. A descobrir o que se esconde, de verdade, sob a jiboia.</p>
+          <p><em>Isso Não É Um Chapéu</em> mergulha nas camadas existenciais que Saint-Exupéry teceu com delicadeza e profundidade. Por trás da aparente simplicidade, um tratado surpreendente sobre as angústias silenciosas da modernidade.</p>
+        </div>
+      </div>
+      <div class="planet-wrap" aria-hidden="true">
+        <svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="pg" cx="38%" cy="30%" r="80%">
+              <stop offset="0%" stop-color="#f6d788"/><stop offset="55%" stop-color="#e8b84a"/><stop offset="100%" stop-color="#c08a26"/>
+            </radialGradient>
+            <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity=".55"/><stop offset="100%" stop-color="#ffffff" stop-opacity=".12"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="170" cy="196" rx="152" ry="54" fill="none" stroke="#9a8fdc" stroke-opacity=".5" stroke-dasharray="3 8" stroke-width="1.6" transform="rotate(-16 170 196)"/>
+          <circle cx="306" cy="150" r="5" fill="#9a8fdc"/>
+          <circle cx="170" cy="205" r="99" fill="url(#pg)"/>
+          <ellipse cx="132" cy="182" rx="16" ry="8" fill="#c08a26" opacity=".5"/>
+          <ellipse cx="208" cy="240" rx="22" ry="10" fill="#c08a26" opacity=".42"/>
+          <ellipse cx="182" cy="164" rx="9" ry="5.5" fill="#c08a26" opacity=".45"/>
+          <path d="M196 152 l10 -13 10 13 z" fill="#c08a26"/>
+          <!-- baobá (a ameaça adormecida): tronco gordo, copa larga achatada -->
+          <g transform="translate(110 128) rotate(-37)">
+            <path d="M-6 0 C -4 -10 -3 -18 -2 -26 L 4 -26 C 5 -18 6 -10 8 0 Z" fill="#7a5426"/>
+            <path d="M-2 -26 C -8 -30 -12 -33 -14 -38 M3 -26 C 9 -30 13 -33 15 -38 M1 -26 C 1 -32 1 -35 1 -39" stroke="#7a5426" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+            <ellipse cx="-14" cy="-40" rx="9" ry="6" fill="#4e7a45"/>
+            <ellipse cx="15" cy="-40" rx="9.5" ry="6.2" fill="#5c8a51"/>
+            <ellipse cx="1" cy="-45" rx="12" ry="7" fill="#5c8a51"/>
+            <ellipse cx="-7" cy="-41" rx="8" ry="5.5" fill="#4e7a45"/>
+            <ellipse cx="8" cy="-42" rx="8" ry="5.5" fill="#4e7a45"/>
+          </g>
+          <!-- o principezinho de costas, em pé na superfície, olhando as estrelas -->
+          <g transform="translate(206 113) rotate(19)">
+            <!-- pés na origem, corpo pra cima -->
+            <ellipse cx="-4" cy="-1" rx="4" ry="2.2" fill="#2c2a45"/>
+            <ellipse cx="6" cy="-1" rx="4" ry="2.2" fill="#2c2a45"/>
+            <path d="M-4 -2 L -4 -10 M6 -2 L 6 -10" stroke="#8a6ea0" stroke-width="4.4" stroke-linecap="round"/>
+            <path d="M-8 -34 C -3 -37 6 -37 10 -34 C 13 -32 13 -27 11 -24 L 12 -12 C 12 -9.5 10 -8 7 -8 L -5 -8 C -8 -8 -10 -9.5 -10 -12 L -9 -24 C -11 -27 -11 -31 -8 -34" fill="#3f7d4e"/>
+            <circle cx="1" cy="-42" r="8.4" fill="#f3cd6f"/>
+            <path d="M-7 -46 C -5 -50 -1 -52 3 -51 M-1 -50 C 3 -53 7 -52 9 -49 M6 -49 C 9 -50 11 -47 11 -45" stroke="#e8b84a" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+            <!-- cachecol esvoaçando pra trás, fino e ondulado -->
+            <path d="M-8 -33 C -15 -32 -21 -34 -26 -31 C -30 -29 -33 -30 -36 -28" stroke="#e8b84a" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+            <path d="M-36 -28 C -38 -26 -39 -24 -41 -23" stroke="#e8b84a" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+            <path d="M-8 -30 C -13 -28 -17 -29 -21 -27" stroke="#d9a93c" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          </g>
+          <g transform="translate(170 92)">
+            <path d="M0 44 C -2 29 2 23 0 11" stroke="#3f7d4e" stroke-width="2.6" fill="none"/>
+            <path d="M0 29 C -8 25 -10 21 -12 17" stroke="#3f7d4e" stroke-width="2" fill="none"/>
+            <circle cx="0" cy="7" r="9" fill="#d95970"/>
+            <circle cx="-5" cy="4" r="5" fill="#b83e56"/>
+            <circle cx="4" cy="3" r="4.6" fill="#ec8296"/>
+            <path d="M-25 48 a25 38 0 0 1 50 0 z" fill="url(#glass)" stroke="#8f86b8" stroke-opacity=".5"/>
+            <ellipse cx="0" cy="48" rx="29" ry="4.6" fill="#8f86b8" opacity=".3"/>
+          </g>
+          <path d="M52 76 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4 z" fill="#d99a2b"/>
+          <path d="M292 240 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 z" fill="#9a8fdc"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE TRIGO (noite) ============ -->
+<section class="quote-sec">
+  <div class="wrap">
+    <p class="pull" id="pull"><span class="pull-mark">“</span>Mas por que cativar, se a gente vai sofrer na despedida? Não importa. Importa que me catives, depois tem o som do trigo ao vento, que lembra teus passos. Então estarei feliz.<span class="pull-src" data-i="pull_src">Clécio Branco · Isso Não É Um Chapéu</span></p>
+  </div>
+  <div class="wheat" aria-hidden="true">
+    <svg viewBox="0 0 1440 210" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#e8b84a" stop-opacity="0"/><stop offset="55%" stop-color="#c08a26" stop-opacity=".35"/><stop offset="100%" stop-color="#8f6415" stop-opacity=".85"/>
+        </linearGradient>
+        <radialGradient id="foxglow" cx="50%" cy="55%" r="50%">
+          <stop offset="0%" stop-color="#f3cd6f" stop-opacity=".34"/><stop offset="60%" stop-color="#f3cd6f" stop-opacity=".12"/><stop offset="100%" stop-color="#f3cd6f" stop-opacity="0"/>
+        </radialGradient>
+        <!-- espiga de trigo: haste curva, grãos em espinha, aristas finas -->
+        <g id="spk">
+          <path d="M0 64 C 3 42 -2 24 1 2" stroke="#c99a2e" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M1 4 C 3 -4 5 -10 8 -16 M1 3 C 1 -5 1 -11 2 -18 M1 4 C -1 -4 -3 -10 -5 -15" stroke="#eabc4e" stroke-width=".9" fill="none" stroke-linecap="round"/>
+          <ellipse cx="-3.6" cy="8" rx="2.4" ry="5.6" fill="#e8b84a" transform="rotate(24 -3.6 8)"/>
+          <ellipse cx="4.6" cy="10" rx="2.4" ry="5.6" fill="#eabc4e" transform="rotate(-22 4.6 10)"/>
+          <ellipse cx="-4.2" cy="17" rx="2.5" ry="5.8" fill="#d9a93c" transform="rotate(26 -4.2 17)"/>
+          <ellipse cx="5" cy="19" rx="2.5" ry="5.8" fill="#e8b84a" transform="rotate(-24 5 19)"/>
+          <ellipse cx="-4.4" cy="26" rx="2.5" ry="5.8" fill="#c99a2e" transform="rotate(28 -4.4 26)"/>
+          <ellipse cx="5" cy="28" rx="2.5" ry="5.8" fill="#d9a93c" transform="rotate(-26 5 28)"/>
+          <ellipse cx="-4" cy="35" rx="2.4" ry="5.4" fill="#c08a26" transform="rotate(30 -4 35)"/>
+          <ellipse cx="4.4" cy="37" rx="2.4" ry="5.4" fill="#c99a2e" transform="rotate(-28 4.4 37)"/>
+          <ellipse cx="1" cy="1" rx="2.4" ry="5.8" fill="#eabc4e" transform="rotate(2 1 1)"/>
+        </g>
+        <!-- capim fino -->
+        <g id="blade">
+          <path d="M0 34 C 3 22 1 12 6 0" stroke="#b8862a" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+          <path d="M2 34 C -2 24 -1 14 -5 4" stroke="#a87a20" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        </g>
+      </defs>
+      <rect x="0" y="86" width="1440" height="124" fill="url(#wg)"/>
+      <!-- clareira de luz atrás da raposa -->
+      <ellipse cx="722" cy="185" rx="150" ry="62" fill="url(#foxglow)"/>
+      <!-- camadas do campo: JS popula (fundo denso escuro + frente detalhada) -->
+      <g id="wheat-back" opacity=".45"></g>
+      <g id="wheat-mid" opacity=".75"></g>
+      <!-- a raposa: sentada de perfil, olhando as estrelas -->
+      <g transform="translate(676 122)">
+        <!-- cauda grande curvando pela frente, ponta creme -->
+        <path d="M56 78 C 76 76 90 64 90 46 C 90 38 87 32 82 28 C 92 32 99 42 99 54 C 99 72 85 85 64 86 C 59 86.4 55 84 53 81 Z" fill="#c85d1e"/>
+        <path d="M82 28 C 87 32 90 38 90 46 C 90 51 89 55 87 59 C 95 52 96 38 89 30 Z" fill="#f7f1e1"/>
+        <!-- corpo sentado (costas curvas) -->
+        <path d="M18 84 C 14 66 20 48 34 38 C 42 32 52 32 58 40 C 66 50 68 66 66 84 C 66 87 63 88 60 88 L 24 88 C 20 88 18.5 86.5 18 84 Z" fill="#e2712c"/>
+        <!-- peito creme -->
+        <path d="M26 84 C 24 70 28 56 38 48 C 44 54 46 68 44 84 C 44 86.5 42 88 39 88 L 31 88 C 28 88 26.5 86.5 26 84 Z" fill="#f7f1e1"/>
+        <!-- patinhas na base -->
+        <ellipse cx="30" cy="86" rx="5.4" ry="3" fill="#c85d1e"/>
+        <ellipse cx="41" cy="86" rx="5.4" ry="3" fill="#c85d1e"/>
+        <!-- cabeça erguida olhando o céu -->
+        <g transform="translate(34 22) rotate(-14)">
+          <path d="M-14 6 C -14 -4 -6 -11 3 -11 C 12 -11 19 -4 19 5 C 19 12 13 17 3 17 C -7 17 -14 13 -14 6 Z" fill="#e2712c"/>
+          <!-- focinho -->
+          <path d="M-14 4 C -20 5 -25 7 -28 10 C -24 13 -19 14 -13 13 Z" fill="#f7f1e1"/>
+          <circle cx="-27" cy="10" r="2.6" fill="#2c2a45"/>
+          <!-- olho fechado sereno -->
+          <path d="M-4 3 C -2 5 1 5 3 3" stroke="#2c2a45" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <!-- orelhas -->
+          <path d="M-6 -9 L -10 -24 L 3 -13 Z" fill="#e2712c"/>
+          <path d="M-6.6 -12 L -8.8 -20.5 L -1.5 -14.4 Z" fill="#2c2a45" opacity=".55"/>
+          <path d="M9 -10 L 12 -25 L 20 -12 Z" fill="#e2712c"/>
+          <path d="M11 -13.5 L 12.8 -21.5 L 17.4 -14.2 Z" fill="#2c2a45" opacity=".55"/>
+        </g>
+      </g>
+      <g id="wheat-front"></g>
+    </svg>
+  </div>
+  <div class="fireflies" aria-hidden="true">
+    <i style="left:38%;bottom:16%;animation-delay:0s"></i>
+    <i style="left:46%;bottom:24%;animation-delay:1.6s"></i>
+    <i style="left:57%;bottom:14%;animation-delay:3.1s"></i>
+    <i style="left:63%;bottom:26%;animation-delay:.8s"></i>
+    <i style="left:72%;bottom:18%;animation-delay:2.3s"></i>
+    <i style="left:30%;bottom:22%;animation-delay:4.2s"></i>
+    <i style="left:81%;bottom:24%;animation-delay:5.4s"></i>
+  </div>
+</section>
+
+<!-- ============ PROFUNDIDADE (papel) — com o desenho nº 1 ============ -->
+<section class="paper paper-sec">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="kicker" data-i="k_tras">A profundidade</p>
+        <h2 data-i="t_tras">O que há <span class="hl"><em>por trás do chapéu</em></span></h2>
+        <div class="prose" id="tras">
+          <p>Mobilizando as ferramentas da análise filosófica e psicológica, Clécio Branco revela um retrato do nosso tempo: a <strong>solidão</strong>, os <strong>jogos de poder</strong> e o custo alto de manter a essência humana num mundo cada vez mais automatizado e pragmático.</p>
+          <p>O Pequeno Príncipe deixa de ser só o menino de outro planeta. Vira metáfora dos nossos próprios <strong>desertos interiores</strong>, dos processos de amadurecimento e das renúncias inevitáveis da vida adulta.</p>
+        </div>
+        <div class="press">
+          <div><span class="q" data-i="press_q">Destaque na imprensa</span>
+          <p data-i="press_t">Em matéria do jornal O Hoje, a obra foi apresentada como uma reflexão sobre o excesso da presença virtual, o isolamento em sociedade e a necessidade dos vínculos afetivos.</p></div>
+        </div>
+      </div>
+      <!-- o desenho nº 1: o "chapéu" que esconde o elefante -->
+      <div class="hat-wrap" aria-hidden="true">
+        <svg viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hatfill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#e8b84a" stop-opacity=".14"/><stop offset="100%" stop-color="#c08a26" stop-opacity=".05"/>
+            </linearGradient>
+          </defs>
+          <!-- o chapéu (a jiboia por fora): a silhueta acompanha o elefante engolido -->
+          <path d="M10 206 C 44 203 72 200 94 192 C 112 186 122 172 134 160 C 150 145 176 136 202 133 C 222 131 236 122 245 106 C 253 92 268 85 281 93 C 292 100 297 118 303 138 C 309 158 322 180 342 194 C 350 199 360 203 368 205 L 368 206 Z"
+                fill="url(#hatfill)" stroke="none"/>
+          <path d="M10 206 C 44 203 72 200 94 192 C 112 186 122 172 134 160 C 150 145 176 136 202 133 C 222 131 236 122 245 106 C 253 92 268 85 281 93 C 292 100 297 118 303 138 C 309 158 322 180 342 194 C 350 199 360 203 368 205"
+                fill="none" stroke="#c08a26" stroke-width="4.2" stroke-linecap="round"/>
+          <path d="M8 206 L 372 206" stroke="#c08a26" stroke-width="4.2" stroke-linecap="round"/>
+          <!-- o elefante escondido: silhueta flat -->
+          <g class="eleph">
+            <g opacity=".3" fill="#8a6ec4">
+              <ellipse cx="206" cy="172" rx="46" ry="23"/>
+              <rect x="166" y="176" width="11" height="27" rx="5"/>
+              <rect x="188" y="180" width="11" height="23" rx="5"/>
+              <rect x="212" y="180" width="11" height="23" rx="5"/>
+              <rect x="232" y="176" width="11" height="27" rx="5"/>
+              <circle cx="250" cy="148" r="21"/>
+              <path d="M262 134 C 275 142 280 156 276 169 C 274 179 268 185 260 187" stroke="#8a6ec4" stroke-width="9.5" fill="none" stroke-linecap="round"/>
+              <path d="M171 163 C 158 165 151 175 154 186" stroke="#8a6ec4" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+            </g>
+            <ellipse cx="237" cy="152" rx="10.5" ry="15" fill="#8a6ec4" opacity=".5" transform="rotate(-10 237 152)"/>
+            <circle cx="256" cy="140" r="2.7" fill="#8a6ec4" opacity=".85"/>
+          </g>
+          <!-- legenda manuscrita -->
+          <text x="190" y="240" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="17" fill="#5b5878" data-i="hat_cap">isso não é um chapéu…</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUMÁRIO (papel-2) ============ -->
+<section class="paper toc-sec">
+  <div class="wrap">
+    <p class="kicker" data-i="k_caps">A travessia</p>
+    <h2 data-i="t_caps">Uma travessia em <span class="hl"><em>19 capítulos</em></span></h2>
+    <p class="prose" data-i="d_caps" style="max-width:60ch">Da primeira estrela à última despedida, cada capítulo é uma parada de reflexão.</p>
+    <ul class="toc" id="chaps"></ul>
+    <div class="sheepbox" aria-hidden="true">
+      <svg viewBox="0 0 74 58" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 22 L 50 14 L 68 24 L 68 48 L 24 56 L 6 46 Z" fill="none" stroke="#8a7f5c" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M6 22 L 24 32 L 68 24 M 24 32 L 24 56" fill="none" stroke="#8a7f5c" stroke-width="2.4" stroke-linejoin="round"/>
+        <circle cx="38" cy="42" r="2.6" fill="#8a7f5c"/><circle cx="50" cy="39" r="2.6" fill="#8a7f5c"/><circle cx="44" cy="48" r="2.6" fill="#8a7f5c"/>
+      </svg>
+      <em data-i="sheep">O cordeiro que você quiser está dentro da caixa.</em>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUTOR (noite) ============ -->
+<section class="night author-sec">
+  <div class="stars" id="stars2" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="author-grid">
+      <div>
+        <p class="kicker" data-i="k_autor">Sobre o autor</p>
+        <h2 data-i="t_autor">Clécio <span class="hl">Branco</span></h2>
+        <div class="prose" id="autor">
+          <p><strong>Clécio Branco</strong> é psicólogo clínico e coordenador de psicologia na Clínica-SPA RITUAALI. <strong>Doutor e Mestre em Filosofia</strong> (Universidade Gama Filho), com formação em Teologia, Ciências Sociais e Psicologia, e especializações em História, Arteterapia, Neurociências do Comportamento e Mindfulness.</p>
+          <p>Autor também de <em>Encontros com o Mestre I</em> e <em>Ensaios de A a Z para Mentes Inquietas</em>. Escreve do encontro entre o consultório, a filosofia e a natureza.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>19</b><span data-i="s1">capítulos de travessia</span></div>
+        <div class="stat"><b>3</b><span data-i="s2">idiomas: português, francês e espanhol</span></div>
+        <div class="stat"><b>Dr.</b><span data-i="s3">em Filosofia, e psicólogo clínico</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTO (papel) ============ -->
+<section class="depo-sec">
+  <div class="wrap">
+    <div class="fleuron" style="color:var(--amber)" aria-hidden="true">
+      <svg viewBox="0 0 38 22" xmlns="http://www.w3.org/2000/svg"><ellipse cx="19" cy="17" rx="17" ry="4" fill="#d99a2b"/><ellipse cx="19" cy="12" rx="9" ry="8" fill="#d99a2b"/></svg>
+    </div>
+    <p class="pull" id="depo"><span class="pull-mark">“</span>Certas leituras podem proporcionar uma grande viagem, um mergulho para dentro de nós mesmos. Certas leituras são delicadas, poéticas, mas também nos desafiam por serem críticas. Esta é uma delas.<span class="pull-src" data-i="depo_src">Renata Di Carmo · no prefácio da obra</span></p>
+  </div>
+</section>
+
+<!-- ============ IDIOMAS (papel) ============ -->
+<section class="paper idio-sec">
+  <div class="wrap">
+    <p class="kicker" data-i="k_idi">Disponível</p>
+    <h2 data-i="t_idi">Leia no <span class="hl"><em>seu idioma</em></span></h2>
+    <div class="langgrid">
+      <div class="langcard" role="button" tabindex="0" onclick="setLang('pt')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();setLang('pt')}">
+        <svg viewBox="0 0 76 76" aria-hidden="true"><defs><clipPath id="fc1"><circle cx="38" cy="38" r="26"/></clipPath></defs><g clip-path="url(#fc1)"><rect width="76" height="76" fill="#199b4c"/><path d="M38 12 L 66 38 L 38 64 L 10 38 Z" fill="#f6d34c"/><circle cx="38" cy="38" r="11.5" fill="#2a4b9b"/><path d="M27.5 35 A 22 22 0 0 1 48.5 41" stroke="#fff" stroke-width="2.4" fill="none"/></g><circle cx="38" cy="38" r="26" fill="none" stroke="rgba(44,42,69,.18)" stroke-width="1.6"/></svg>
+        <b>Português</b><span>Isso Não É Um Chapéu</span></div>
+      <div class="langcard" role="button" tabindex="0" onclick="setLang('fr')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();setLang('fr')}">
+        <svg viewBox="0 0 76 76" aria-hidden="true"><defs><clipPath id="fc2"><circle cx="38" cy="38" r="26"/></clipPath></defs><g clip-path="url(#fc2)"><rect x="12" width="17.33" height="76" fill="#2a4b9b"/><rect x="29.33" width="17.33" height="76" fill="#f4f0e6"/><rect x="46.66" width="17.33" height="76" fill="#d0342c"/></g><circle cx="38" cy="38" r="26" fill="none" stroke="rgba(44,42,69,.18)" stroke-width="1.6"/></svg>
+        <b>Français</b><span>Ceci n'est pas un chapeau</span></div>
+      <div class="langcard" role="button" tabindex="0" onclick="setLang('es')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();setLang('es')}">
+        <svg viewBox="0 0 76 76" aria-hidden="true"><defs><clipPath id="fc3"><circle cx="38" cy="38" r="26"/></clipPath></defs><g clip-path="url(#fc3)"><rect width="76" height="76" fill="#d0342c"/><rect y="25" width="76" height="26" fill="#f6c94c"/></g><circle cx="38" cy="38" r="26" fill="none" stroke="rgba(44,42,69,.18)" stroke-width="1.6"/></svg>
+        <b>Español</b><span>Esto no es un sombrero</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINALE ============ -->
+<section class="finale">
+  <div class="stars" id="stars3" aria-hidden="true"></div>
+  <!-- os pássaros da partida -->
+  <div class="birds" aria-hidden="true">
+    <svg width="150" height="70" viewBox="0 0 150 70" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#f7f1e1" stroke-width="2.2" stroke-linecap="round">
+      <path d="M8 38 q 7 -8 14 0 M22 38 q 7 -8 14 0"/>
+      <path d="M46 22 q 7 -8 14 0 M60 22 q 7 -8 14 0"/>
+      <path d="M88 34 q 7 -8 14 0 M102 34 q 7 -8 14 0"/>
+      <path d="M64 52 q 6 -7 12 0 M76 52 q 6 -7 12 0"/>
+      <path d="M118 14 q 6 -7 12 0 M130 14 q 6 -7 12 0"/>
+    </svg>
+  </div>
+  <div class="plane" aria-hidden="true">
+    <svg width="120" height="54" viewBox="0 0 120 54" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 30 q 26 -10 44 -6" stroke="#f7f1e1" stroke-opacity=".6" stroke-width="1.6" stroke-dasharray="2 7" fill="none" stroke-linecap="round"/>
+      <g transform="translate(52 12)" fill="#141833">
+        <path d="M8 16 q 16 -5 34 -2 l 8 3 q -18 6 -40 3 z" stroke="#e8b84a" stroke-width="1.4"/>
+        <path d="M26 14 l 8 -10 10 -1 -8 12 z" stroke="#e8b84a" stroke-width="1.4"/>
+        <path d="M24 20 l 6 9 9 1 -6 -11 z" stroke="#e8b84a" stroke-width="1.4"/>
+        <circle cx="52" cy="16" r="2.6" fill="#e8b84a"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wrap">
+    <svg class="fin-star" width="30" height="30" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0 l2.6 7.4 L20 10 l-7.4 2.6 L10 20 l-2.6 -7.4 L0 10 l7.4 -2.6 Z" fill="#f3cd6f"/></svg>
+    <h2 data-i="t_fim">Deixe-se <em class="hl" style="color:#f3cd6f">cativar</em></h2>
+    <p data-i="d_fim">O essencial continua invisível aos olhos. Este livro é o convite para voltar a enxergar.</p>
+    <div class="cta-halo">
+      <a class="btn btn-xl" id="ctaBottom" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Zm0 2.2 6.5 3.6L12 11.4 5.5 7.8 12 4.2ZM5 9.3l6 3.4v6.9l-6-3.3V9.3Zm8 10.3v-6.9l6-3.4v7l-6 3.3Z"/></svg>
+        <span data-i="cta">Ler na Amazon</span>
+        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <p class="cta-note" data-i="cta_note">Edição física e Kindle · em português, francês e espanhol</p>
+  </div>
+  <div class="finale-dunes" aria-hidden="true">
+    <svg viewBox="0 0 1440 140" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 76 Q 300 18 640 60 T 1440 54 V140 H0 Z" fill="#7a4d22" opacity=".7"/>
+      <path d="M0 100 Q 380 52 780 88 T 1440 88 V140 H0 Z" fill="#3a2410"/>
+      <path d="M0 84 Q 310 28 650 68 T 1440 62" stroke="#f3cd6f" stroke-opacity=".55" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div class="brand">Clécio <b style="color:var(--gold)">Branco</b></div>
+  <p data-i="foot">Isso Não É Um Chapéu · Reflexões a respeito de O Pequeno Príncipe</p>
+  <p style="margin-top:10px"><a href="https://instagram.com/clecio.branco" target="_blank" rel="noopener">@clecio.branco</a></p>
+</div></footer>
+
+<script>
+/* estrelas contidas (overflow:hidden no container; posições seguras) */
+function seedStars(id,n,n4){
+  const f=document.getElementById(id);if(!f)return;
+  let seed=id.length*37+7;const rnd=()=> (seed=(seed*9301+49297)%233280)/233280;
+  let html='';
+  for(let i=0;i<n;i++){
+    const x=rnd()*95+1,y=rnd()*92+2,s=rnd()*1.8+.8,d=(rnd()*4).toFixed(2),o=rnd()*.5+.3;
+    html+=`<i style="left:${x.toFixed(2)}%;top:${y.toFixed(2)}%;width:${s.toFixed(1)}px;height:${s.toFixed(1)}px;opacity:${o.toFixed(2)};animation-delay:${d}s"></i>`;
+  }
+  const g=['#e8b84a','#9a8fdc','#fdf6e3'];
+  for(let i=0;i<n4;i++){
+    const x=rnd()*90+3,y=rnd()*84+4,s=rnd()*7+8,c=g[i%3],d=(rnd()*5).toFixed(2);
+    html+=`<svg style="left:${x.toFixed(1)}%;top:${y.toFixed(1)}%;animation-delay:${d}s" width="${s.toFixed(0)}" height="${s.toFixed(0)}" viewBox="0 0 20 20"><path d="M10 0 l2.6 7.4 L20 10 l-7.4 2.6 L10 20 l-2.6 -7.4 L0 10 l7.4 -2.6 Z" fill="${c}"/></svg>`;
+  }
+  f.innerHTML=html;
+}
+seedStars('starsHero',34,5);seedStars('stars2',36,5);seedStars('stars3',30,4);
+
+/* campo de trigo denso em 3 camadas */
+function seedWheat(){
+  let seed=77;const rnd=()=> (seed=(seed*9301+49297)%233280)/233280;
+  const layer=(id,count,s0,s1,ybase,wind)=>{
+    const g=document.getElementById(id);if(!g)return;
+    let h='';const step=1440/count;
+    for(let i=0;i<count;i++){
+      const x=(i*step+rnd()*step*.8).toFixed(1);
+      const s=(s0+rnd()*(s1-s0));
+      const r=(-9+rnd()*18).toFixed(1);
+      const y=(ybase+rnd()*14-82*s).toFixed(1);
+      if(id==='wheat-front'&&x>620&&x<812){continue} /* clareira da raposa */
+      const cls=wind?` class="sway" style="animation-delay:-${(rnd()*4.6).toFixed(2)}s"`:'';
+      h+=`<g transform="translate(${x} ${y}) scale(${s.toFixed(2)}) rotate(${r})"><use href="#spk"${cls}/></g>`;
+      if(i%3===1){const bx=(x*1+step*.45).toFixed(1);h+=`<use href="#blade" transform="translate(${bx} ${(ybase-30*s).toFixed(1)}) scale(${s.toFixed(2)})"/>`}
+    }
+    g.innerHTML=h;
+  };
+  layer('wheat-back',84,.5,.72,206,false);
+  layer('wheat-mid',48,.7,.92,208,true);
+  layer('wheat-front',30,.92,1.18,211,true);
+}
+seedWheat();
+
+const CHAPS={
+ pt:["Solidão e liberdade","Um bom encontro","Somos nossa própria casa","O sentido de as coisas serem como são","Sobre o poder e o narcisismo","A sociedade do desempenho","O ser no mundo","É preciso partir e viver","O que é cativar?"],
+ fr:["Solitude et liberté","Une belle rencontre","Nous sommes notre propre maison","Le sens des choses telles qu'elles sont","Le pouvoir et le narcissisme","La société de la performance","L'être au monde","Il faut partir et vivre","Qu'est-ce qu'apprivoiser ?"],
+ es:["Soledad y libertad","Un buen encuentro","Somos nuestra propia casa","El sentido de que las cosas sean como son","El poder y el narcisismo","La sociedad del rendimiento","El ser en el mundo","Hay que partir y vivir","¿Qué es domesticar?"]
+};
+const AMZ={
+ pt:"https://a.co/d/0c3RwNbl",
+ fr:"https://amzn.eu/d/0dce70g0",
+ es:"https://www.amazon.es/dp/B0GNDHRDT4"
+};
+const COVER={pt:"img/capa_PT.webp",fr:"img/capa_FR.webp",es:"img/capa_ES.webp"};
+const I18N={
+ pt:{eyebrow:"Reflexões a respeito de O Pequeno Príncipe",h1:"Isso não é um chapéu",lede:"O Pequeno Príncipe relido pelo olhar adulto. O que a criança via de primeira, e o adulto passou a vida sem enxergar.",by:"do psicólogo e filósofo Clécio Branco",cta:"Ler na Amazon",
+  k_convite:"O convite",t_convite:'Sob o desenho, <span class="hl"><em>algo maior</em></span>',
+  k_tras:"A profundidade",t_tras:'O que há <span class="hl"><em>por trás do chapéu</em></span>',press_q:"Destaque na imprensa",press_t:"Em matéria do jornal O Hoje, a obra foi apresentada como uma reflexão sobre o excesso da presença virtual, o isolamento em sociedade e a necessidade dos vínculos afetivos.",
+  k_caps:"A travessia",t_caps:'Uma travessia em <span class="hl"><em>19 capítulos</em></span>',d_caps:"Da primeira estrela à última despedida, cada capítulo é uma parada de reflexão.",
+  k_autor:"Sobre o autor",t_autor:'Clécio <span class="hl">Branco</span>',s1:"capítulos de travessia",s2:"idiomas: português, francês e espanhol",s3:"em Filosofia, e psicólogo clínico",
+  k_idi:"Disponível",t_idi:'Leia no <span class="hl"><em>seu idioma</em></span>',
+  t_fim:'Deixe-se <em class="hl" style="color:#f3cd6f">cativar</em>',d_fim:"O essencial continua invisível aos olhos. Este livro é o convite para voltar a enxergar.",
+  pull_src:"Clécio Branco · Isso Não É Um Chapéu",depo_src:"Renata Di Carmo · no prefácio da obra",foot:"Isso Não É Um Chapéu · Reflexões a respeito de O Pequeno Príncipe",cta_note:"Edição física e Kindle · em português, francês e espanhol",hat_cap:"isso não é um chapéu…",sheep:"O cordeiro que você quiser está dentro da caixa.",
+  convite:['Quase todos lemos <strong>O Pequeno Príncipe</strong> na infância, quando as histórias ganham vida pelo encantamento e pela inocência. Guardamos o livro como um conto sobre a ternura, a amizade e a pureza do coração.','Mas, ao voltar a esse clássico já adultos, somos convidados a ver <strong>além do chapéu</strong>. A descobrir o que se esconde, de verdade, sob a jiboia.','<em>Isso Não É Um Chapéu</em> mergulha nas camadas existenciais que Saint-Exupéry teceu com delicadeza e profundidade. Por trás da aparente simplicidade, um tratado surpreendente sobre as angústias silenciosas da modernidade.'],
+  tras:['Mobilizando as ferramentas da análise filosófica e psicológica, Clécio Branco revela um retrato do nosso tempo: a <strong>solidão</strong>, os <strong>jogos de poder</strong> e o custo alto de manter a essência humana num mundo cada vez mais automatizado e pragmático.','O Pequeno Príncipe deixa de ser só o menino de outro planeta. Vira metáfora dos nossos próprios <strong>desertos interiores</strong>, dos processos de amadurecimento e das renúncias inevitáveis da vida adulta.'],
+  autor:['<strong>Clécio Branco</strong> é psicólogo clínico e coordenador de psicologia na Clínica-SPA RITUAALI. <strong>Doutor e Mestre em Filosofia</strong> (Universidade Gama Filho), com formação em Teologia, Ciências Sociais e Psicologia, e especializações em História, Arteterapia, Neurociências do Comportamento e Mindfulness.','Autor também de <em>Encontros com o Mestre I</em> e <em>Ensaios de A a Z para Mentes Inquietas</em>. Escreve do encontro entre o consultório, a filosofia e a natureza.'],
+  pull:'Mas por que cativar, se a gente vai sofrer na despedida? Não importa. Importa que me catives, depois tem o som do trigo ao vento, que lembra teus passos. Então estarei feliz.',
+  depo:'Certas leituras podem proporcionar uma grande viagem, um mergulho para dentro de nós mesmos. Certas leituras são delicadas, poéticas, mas também nos desafiam por serem críticas. Esta é uma delas.'},
+ fr:{eyebrow:"Réflexions à propos de Le Petit Prince",h1:"Ceci n'est pas un chapeau",lede:"Le Petit Prince relu par le regard adulte. Ce que l'enfant voyait d'emblée, et que l'adulte a passé sa vie sans voir.",by:"du psychologue et philosophe Clécio Branco",cta:"Lire sur Amazon",
+  k_convite:"L'invitation",t_convite:'Sous le dessin, <span class="hl"><em>quelque chose de plus grand</em></span>',
+  k_tras:"La profondeur",t_tras:'Ce qui se cache <span class="hl"><em>derrière le chapeau</em></span>',press_q:"Dans la presse",press_t:"Dans un article du journal O Hoje, l'œuvre a été présentée comme une réflexion sur l'excès de présence virtuelle, l'isolement en société et le besoin de liens affectifs.",
+  k_caps:"La traversée",t_caps:'Une traversée en <span class="hl"><em>19 chapitres</em></span>',d_caps:"De la première étoile au dernier adieu, chaque chapitre est une halte de réflexion.",
+  k_autor:"À propos de l'auteur",t_autor:'Clécio <span class="hl">Branco</span>',s1:"chapitres de traversée",s2:"langues : portugais, français et espagnol",s3:"en Philosophie, et psychologue clinicien",
+  k_idi:"Disponible",t_idi:'Lisez dans <span class="hl"><em>votre langue</em></span>',
+  t_fim:'Laissez-vous <em class="hl" style="color:#f3cd6f">apprivoiser</em>',d_fim:"L'essentiel reste invisible pour les yeux. Ce livre est l'invitation à revoir.",
+  pull_src:"Clécio Branco · Ceci n'est pas un chapeau",depo_src:"Renata Di Carmo · dans la préface",foot:"Ceci n'est pas un chapeau · Réflexions à propos de Le Petit Prince",cta_note:"Broché et Kindle · en portugais, français et espagnol",hat_cap:"ceci n'est pas un chapeau…",sheep:"Le mouton que tu veux est dans la caisse.",
+  convite:["Presque tous, nous avons lu <strong>Le Petit Prince</strong> enfants, lorsque les histoires prennent vie à travers l'émerveillement et l'innocence. Nous avons gardé ce livre comme un conte sur la tendresse, l'amitié et la pureté du cœur.","Mais en revenant à ce classique à l'âge adulte, nous sommes invités à voir <strong>au-delà du chapeau</strong>. À découvrir ce qui se cache réellement sous le boa.","<em>Ceci n'est pas un chapeau</em> plonge dans les couches existentielles que Saint-Exupéry a tissées avec délicatesse et profondeur. Derrière une apparente simplicité, un traité surprenant sur les angoisses silencieuses de la modernité."],
+  tras:["En mobilisant les outils de l'analyse philosophique et psychologique, Clécio Branco révèle un portrait de notre temps : la <strong>solitude</strong>, les <strong>jeux de pouvoir</strong> et le coût élevé du maintien de l'essence humaine dans un monde de plus en plus automatisé et pragmatique.","Le Petit Prince n'est plus seulement le garçon venu d'une autre planète. Il devient la métaphore de nos propres <strong>déserts intérieurs</strong>, des processus de maturation et des renoncements inévitables de l'âge adulte."],
+  autor:["<strong>Clécio Branco</strong> est psychologue clinicien et coordinateur de psychologie à la Clinique-SPA RITUAALI. <strong>Docteur et Master en Philosophie</strong> (Université Gama Filho), avec une formation en Théologie, Sciences Sociales et Psychologie, et des spécialisations en Histoire, Art-thérapie, Neurosciences du comportement et Mindfulness.","Également auteur de <em>Encontros com o Mestre I</em> et <em>Ensaios de A a Z para Mentes Inquietas</em>. Il écrit à la rencontre du cabinet, de la philosophie et de la nature."],
+  pull:"Mais pourquoi apprivoiser, si l'on doit souffrir de la séparation ? Peu importe. Ce qui importe, c'est que tu m'apprivoises ; ensuite il y a le bruit du blé dans le vent, qui rappelle tes pas. Alors je serai heureux.",
+  depo:"Certaines lectures peuvent offrir un grand voyage, une plongée en nous-mêmes. Certaines lectures sont délicates, poétiques, mais nous défient aussi par leur regard critique. Celle-ci en fait partie."},
+ es:{eyebrow:"Reflexiones sobre El principito",h1:"Esto no es un sombrero",lede:"El principito releído con la mirada adulta. Lo que el niño veía de inmediato, y el adulto pasó la vida sin ver.",by:"del psicólogo y filósofo Clécio Branco",cta:"Leer en Amazon",
+  k_convite:"La invitación",t_convite:'Bajo el dibujo, <span class="hl"><em>algo más grande</em></span>',
+  k_tras:"La profundidad",t_tras:'Lo que hay <span class="hl"><em>detrás del sombrero</em></span>',press_q:"En la prensa",press_t:"En un artículo del periódico O Hoje, la obra fue presentada como una reflexión sobre el exceso de presencia virtual, el aislamiento en sociedad y la necesidad de los vínculos afectivos.",
+  k_caps:"La travesía",t_caps:'Una travesía en <span class="hl"><em>19 capítulos</em></span>',d_caps:"De la primera estrella hasta la última despedida, cada capítulo es una parada de reflexión.",
+  k_autor:"Sobre el autor",t_autor:'Clécio <span class="hl">Branco</span>',s1:"capítulos de travesía",s2:"idiomas: portugués, francés y español",s3:"en Filosofía, y psicólogo clínico",
+  k_idi:"Disponible",t_idi:'Léelo en <span class="hl"><em>tu idioma</em></span>',
+  t_fim:'Déjate <em class="hl" style="color:#f3cd6f">domesticar</em>',d_fim:"Lo esencial sigue siendo invisible a los ojos. Este libro es la invitación a volver a ver.",
+  pull_src:"Clécio Branco · Esto no es un sombrero",depo_src:"Renata Di Carmo · en el prefacio",foot:"Esto no es un sombrero · Reflexiones sobre El principito",cta_note:"Tapa blanda y Kindle · en portugués, francés y español",hat_cap:"esto no es un sombrero…",sheep:"El cordero que quieras está dentro de la caja.",
+  convite:["Casi todos leímos <strong>El principito</strong> en la infancia, cuando las historias cobran vida a través del asombro y la inocencia. Guardamos el libro como un cuento sobre la ternura, la amistad y la pureza del corazón.","Pero, al volver a este clásico ya adultos, se nos invita a ver <strong>más allá del sombrero</strong>. A descubrir lo que realmente se esconde bajo la boa.","<em>Esto no es un sombrero</em> se sumerge en las capas existenciales que Saint-Exupéry tejió con delicadeza y profundidad. Tras una aparente simplicidad, un tratado sorprendente sobre las angustias silenciosas de la modernidad."],
+  tras:["Movilizando las herramientas del análisis filosófico y psicológico, Clécio Branco revela un retrato de nuestro tiempo: la <strong>soledad</strong>, los <strong>juegos de poder</strong> y el alto costo de mantener la esencia humana en un mundo cada vez más automatizado y pragmático.","El principito deja de ser solo el niño de otro planeta. Se convierte en metáfora de nuestros propios <strong>desiertos interiores</strong>, de los procesos de maduración y de las renuncias inevitables de la vida adulta."],
+  autor:["<strong>Clécio Branco</strong> es psicólogo clínico y coordinador de psicología en la Clínica-SPA RITUAALI. <strong>Doctor y Máster en Filosofía</strong> (Universidad Gama Filho), con formación en Teología, Ciencias Sociales y Psicología, y especializaciones en Historia, Arteterapia, Neurociencias del Comportamiento y Mindfulness.","Autor también de <em>Encontros com o Mestre I</em> y <em>Ensaios de A a Z para Mentes Inquietas</em>. Escribe desde el encuentro entre la consulta, la filosofía y la naturaleza."],
+  pull:"Pero ¿por qué domesticar, si vamos a sufrir en la despedida? No importa. Importa que me domestiques; después está el sonido del trigo con el viento, que recuerda tus pasos. Entonces seré feliz.",
+  depo:"Ciertas lecturas pueden ofrecer un gran viaje, una inmersión hacia dentro de nosotros mismos. Ciertas lecturas son delicadas, poéticas, pero también nos desafían por ser críticas. Esta es una de ellas."}
+};
+
+function renderChaps(lang){
+  document.getElementById('chaps').innerHTML=CHAPS[lang].map((c,i)=>
+    `<li><span class="n">${String(i+1).padStart(2,'0')}</span><span>${c}</span><span class="dots"></span><svg class="st" width="13" height="13" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0 l2.6 7.4 L20 10 l-7.4 2.6 L10 20 l-2.6 -7.4 L0 10 l7.4 -2.6 Z" fill="#9a8fdc"/></svg></li>`).join('');
+}
+function setLang(lang){
+  const d=I18N[lang];
+  document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));
+  document.querySelectorAll('[data-i]').forEach(el=>{el.innerHTML=d[el.dataset.i]??el.innerHTML;});
+  document.getElementById('convite').innerHTML=d.convite.map((p,i)=>`<p${i===0?' class="dropcap"':''}>${p}</p>`).join('');
+  document.getElementById('tras').innerHTML=d.tras.map(p=>`<p>${p}</p>`).join('');
+  document.getElementById('autor').innerHTML=d.autor.map(p=>`<p>${p}</p>`).join('');
+  document.getElementById('pull').innerHTML=`<span class="pull-mark">“</span>${d.pull}<span class="pull-src">${d.pull_src}</span>`;
+  document.getElementById('depo').innerHTML=`<span class="pull-mark">“</span>${d.depo}<span class="pull-src">${d.depo_src}</span>`;
+  const cov=document.getElementById('cover');
+  if(cov){cov.src=COVER[lang];cov.alt=({pt:'Capa do livro Isso Não É Um Chapéu',fr:'Couverture du livre Ceci n\'est pas un chapeau',es:'Portada del libro Esto no es un sombrero'})[lang];}
+  document.getElementById('ctaTop').href=AMZ[lang];
+  document.getElementById('ctaBottom').href=AMZ[lang];
+  document.documentElement.lang=({pt:'pt-BR',fr:'fr',es:'es'})[lang];
+  document.title=d.h1+' — Clécio Branco';
+  try{localStorage.setItem('clecio_lang',lang)}catch(e){}
+  renderChaps(lang);
+}
+renderChaps('pt');
+document.getElementById('ctaTop').href=AMZ.pt;
+document.getElementById('ctaBottom').href=AMZ.pt;
+try{const s=localStorage.getItem('clecio_lang');if(s&&s!=='pt')setLang(s)}catch(e){}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Book","name":"Isso Não É Um Chapéu — Reflexões a respeito de O Pequeno Príncipe","author":{"@type":"Person","name":"Clécio Branco","jobTitle":"Psicólogo e Filósofo"},"inLanguage":["pt-BR","fr","es"],"isbn":"978-65-5872-878-8","bookFormat":"https://schema.org/Paperback","about":"Releitura filosófica e psicológica de O Pequeno Príncipe","publisher":"LC Editorial"}
+</script>
+</body>
+</html>
